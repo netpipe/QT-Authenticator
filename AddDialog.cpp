@@ -22,6 +22,8 @@ AddDialog::AddDialog(QWidget *parent)
   m_validIntervalText = new QLineEdit;
   m_presetComboBox = new QComboBox;
 
+  m_validIntervalText->setText("30");
+
   // fill presets
   m_presetComboBox->addItem(tr("Choose"));
   m_presetComboBox->addItem(tr("WordPress iThemes"), QVariant(TwoFA::Presets::WORDPRESS_ITHEMES));
