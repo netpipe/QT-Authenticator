@@ -28,9 +28,14 @@ SOURCES = AddDialog.cpp \
           MainWindow.cpp \
           Storage.cpp \
           TableModel.cpp \
-          lib/gauche.cpp \
           lib/libcppotp/bytes.cpp \
           lib/libcppotp/otp.cpp \
-          lib/libcppotp/sha1.cpp
+          lib/libcppotp/sha1.cpp \
+          main.cpp
 
 TRANSLATIONS = 2fa_de.ts
+
+DISTFILES += \
+    resources/images/appicon240.png \
+    resources/images/lockicon.png \
+    resources/images/lockicon_white.png

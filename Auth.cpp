@@ -31,7 +31,7 @@ Auth::Auth(){
 uint32_t Auth::generateToken(const QString t_secret, const int t_interval) {
   const Bytes::ByteString key = Bytes::fromBase32(t_secret.toStdString());
   uint32_t token = totp(key, time(nullptr), 0, t_interval, 6);
-  //qDebug() << QString("%1 (%2 remain)").arg(token).arg(t_interval - (time(nullptr) % t_interval));
+  qDebug() << QString("%1 (%2 remain)").arg(token).arg(t_interval - (time(nullptr) % t_interval));
 
   return token;
 }
